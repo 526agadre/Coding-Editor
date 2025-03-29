@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Editor with Run Output</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Top Buttons for Save, Open, and Run -->
+  <div class="top-buttons">
+    <button class="save-btn" onclick="saveCode()">Save</button>
+    <button class="open-btn" onclick="openCode()">Open</button>
+    <button class="run-btn" onclick="runCode()">Run</button>
+  </div>
+
+  <div class="container">
+    <!-- Left Panel for Code -->
+    <div class="editor-panel">
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('html')">HTML</button>
+        <button class="tab-btn" onclick="switchTab('css')">CSS</button>
+        <button class="tab-btn" onclick="switchTab('js')">JavaScript</button>
+      </div>
+      
+      <div class="code-editors">
+        <textarea id="html-editor" class="code-editor" placeholder="Write HTML here..."></textarea>
+        <textarea id="css-editor" class="code-editor hidden" placeholder="Write CSS here..."></textarea>
+        <textarea id="js-editor" class="code-editor hidden" placeholder="Write JavaScript here..."></textarea>
+      </div>
+    </div>
+
+    <!-- Right Panel for Output -->
+    <div class="output-panel">
+      <iframe id="output"></iframe>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Code Editor | Powered by OpenAI</p>
+  </footer>
+
+</body>
+</html>
